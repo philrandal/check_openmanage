@@ -1476,11 +1476,11 @@ sub documentation_url {
     $model =~ s{\s}{-}xms;
 
     if (exists $country{$opt{htmlinfo}}) {
-	return sprintf 'http://www.dell.com/support/troubleshooting/%s/%s/19/Product/%s#ui-tabs-4',
+	return sprintf 'http://www.dell.com/support/home/%s/%s/04/product-support/product/%s/',
 	  $country{$opt{htmlinfo}}->{c}, $country{$opt{htmlinfo}}->{l}, $model;
     }
     else {
-	return sprintf 'http://www.dell.com/support/troubleshooting/us/en/19/Product/%s#ui-tabs-4',
+	return sprintf 'http://www.dell.com/support/home/us/en/19/product-support/product/%s/',
 	  $model;
     }
     return;
@@ -1490,16 +1490,16 @@ sub documentation_url {
 # serial number (servicetag)
 sub warranty_url {
     my $tag       = shift;
-    my $url_start = 'http://www.dell.com/support/troubleshooting';
-    my $url_end   = 'Index?t=warranty&servicetag';
+    my $url_start = 'http://www.dell.com/support/home';
+    my $url_end   = '19/product-support/servicetag';
 
     if (exists $country{$opt{htmlinfo}}) {
-	return sprintf '%s/%s/%s/nodhs1/%s=%s',
+	return sprintf '%s/%s/%s/%s/%s/',
 	  $url_start, $country{$opt{htmlinfo}}->{c},
 	  $country{$opt{htmlinfo}}->{l}, $url_end, $tag;
     }
     else {
-	return sprintf '%s/%s=%s', $url_start, $url_end, $tag;
+	return sprintf '%s/us/en/%s/%s/', $url_start, $url_end, $tag;
     }
 }
 
