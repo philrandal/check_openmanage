@@ -5098,6 +5098,7 @@ sub get_firmware_info {
 	 20 => 'lifecycleController',                # Lifecycle Controller
          21 => 'iDRAC7',                             # iDRAC7
          22 => 'iDRAC8',                             # iDRAC8
+	 23 => 'iDRAC9',                             # iDRAC9
 	);
 
 
