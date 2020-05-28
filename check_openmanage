@@ -4975,7 +4975,7 @@ sub get_snmp_about {
         $sysinfo{om} = 'unknown';
         my $msg = sprintf 'SNMP ERROR: Getting OMSA version failed: %s', $snmp_session->error;
         report('other', $msg, $E_UNKNOWN);
-    } 
+    }
     else {
         $sysinfo{om} = $result;
     }
@@ -5096,8 +5096,8 @@ sub get_firmware_info {
 	 18 => 'iDRAC6',                             # iDRAC6 (not defined in 7.0.0 MIB!)
 	 19 => 'unifiedServerConfigurator',          # Unified Server Configurator
 	 20 => 'lifecycleController',                # Lifecycle Controller
-         21 => 'iDRAC7',                             # iDRAC7
-         22 => 'iDRAC8',                             # iDRAC8
+   21 => 'iDRAC7',                             # iDRAC7
+   22 => 'iDRAC8',                             # iDRAC8
 	 23 => 'iDRAC9',                             # iDRAC9
 	);
 
